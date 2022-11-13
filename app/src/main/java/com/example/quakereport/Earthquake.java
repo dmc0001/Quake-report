@@ -1,11 +1,11 @@
 package com.example.quakereport;
 
-public class AndroidFlavor {
+public class Earthquake {
     private String intensity;
     private String place;
     private String date;
 
-    public AndroidFlavor(String intensity, String place, String date) {
+    public Earthquake(String intensity, String place, String date) {
         this.intensity = intensity;
         this.place = place;
         this.date = date;
