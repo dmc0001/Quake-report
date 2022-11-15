@@ -1,37 +1,63 @@
 package com.example.quakereport;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Earthquake {
-    private String intensity;
-    private String place;
-    private String date;
+    /** Magnitude of the earthquake */
+    private double mMagnitude;
 
-    public Earthquake(String intensity, String place, String date) {
-        this.intensity = intensity;
-        this.place = place;
-        this.date = date;
+    /** Location of the earthquake */
+    private String mLocation;
+
+    /** Time of the earthquake */
+    private long mTimeInMilliseconds;
+
+    /** Website URL of the earthquake */
+    private String mUrl;
+
+    /**
+     * Constructs a new {@link Earthquake} object.
+     *
+     * @param magnitude is the magnitude (size) of the earthquake
+     * @param location is the location where the earthquake happened
+     * @param timeInMilliseconds is the time in milliseconds (from the Epoch) when the
+     *                           earthquake happened
+     * @param url is the website URL to find more details about the earthquake
+     */
+    public Earthquake(double magnitude, String location, long timeInMilliseconds, String url) {
+        mMagnitude = magnitude;
+        mLocation = location;
+        mTimeInMilliseconds = timeInMilliseconds;
+        mUrl = url;
     }
 
-    public String getIntensity() {
-        return intensity;
+    /**
+     * Returns the magnitude of the earthquake.
+     */
+    public double getMagnitude() {
+        return mMagnitude;
     }
 
-    public void setIntensity(String intensity) {
-        this.intensity = intensity;
+    /**
+     * Returns the location of the earthquake.
+     */
+    public String getLocation() {
+        return mLocation;
     }
 
-    public String getPlace() {
-        return place;
+    /**
+     * Returns the time of the earthquake.
+     */
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 
-    public void setPlace(String place) {
-        this.place = place;
+    /**
+     * Returns the website URL to find more information about the earthquake.
+     */
+    public String getUrl() {
+        return mUrl;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
 }
